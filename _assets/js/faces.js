@@ -9,8 +9,7 @@ define('faces', [
 , 'text!../templates/details.html'
 ], function($, _, face_template, details_template) {
 
-  var api_url = 'https://api.github.com/'
-    , faces_target   // jQuery Object
+  var faces_target   // jQuery Object
     , details_target // jQuery Object
     , class_name   // String
     , callback     // Function
@@ -20,7 +19,7 @@ define('faces', [
   details_template = _.template(details_template)
 
   function load(params, _callback) {
-    var url        = api_url + 'orgs/' + params.organization_name + '/members'
+    var url        = '/assets/json/members.json'
     faces_target   = $(params.faces_target)
     details_target = $(params.details_target)
     class_name     = params.class_name
@@ -58,7 +57,7 @@ define('faces', [
     if (details[login]) {
       details_target.html(details_template(details[login]))
     } else {
-      url = api_url + 'users/' + login
+      url = '/assets/json/users/' + login + '.json'
       $.ajax({
         type : 'GET'
       , url : url
