@@ -26,10 +26,18 @@ define('faces', [
     class_name     = params.class_name
     callback       = _callback
 
-    $.getJSON(url, gotUsers)
+    $.ajax({
+      type : 'GET'
+    , url : url
+    , async : false
+    , contentType : 'application/json'
+    , jsonpCallback : 'jsonpCallback'
+    , success : gotUsers
+    })
   }
 
   function gotUsers(data) {
+    data = JSON.parse(data)
     _.each(data, function(user, position, users) {
       faces_target.append(face_template({
         user : user
@@ -51,11 +59,18 @@ define('faces', [
       details_target.html(details_template(details[login]))
     } else {
       url = api_url + 'users/' + login
-      $.getJSON(url, function(data) {
-        details[login] = {
-          user : data
+      $.ajax({
+        type : 'GET'
+      , url : url
+      , async : false
+      , contentType : 'application/json'
+      , jsonpCallback : 'jsonpCallback'
+      , success : function(data) {
+          details[login] = {
+            user : JSON.parse(data)
+          }
+          details_target.html(details_template(details[login]))
         }
-        details_target.html(details_template(details[login]))
       })
     }
   }
