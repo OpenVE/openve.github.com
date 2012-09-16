@@ -19,7 +19,7 @@ define('faces', [
   details_template = _.template(details_template)
 
   function load(params, _callback) {
-    var url        = '/assets/json/members.json'
+    var url        = '/json/members.json'
     faces_target   = $(params.faces_target)
     details_target = $(params.details_target)
     class_name     = params.class_name
@@ -49,7 +49,7 @@ define('faces', [
     if (details[login]) {
       details_target.html(details_template(details[login]))
     } else {
-      url = '/assets/json/users/' + login + '.json'
+      url = '/json/users/' + login + '.json'
       $.getJSON(url, function(data) {
         details[login] = {
           user : data
