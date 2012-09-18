@@ -60,7 +60,7 @@ function requestUser(login, callback) {
 function writeUser(data) {
   var data_json = JSON.parse(data)
   console.log('Writing user: ' + data_json.login)
-  fs.writeFile('../_assets/json/users/' + data_json.login + '.json', data, throwError)
+  fs.writeFile('../json/users/' + data_json.login + '.json', data, throwError)
 }
 
 
@@ -83,7 +83,7 @@ function requestMembers(callback) {
 
 function writeMembers(data) {
   console.log(data)
-  fs.writeFile('../_assets/json/members.json', data, throwError)
+  fs.writeFile('../json/members.json', data, throwError)
 }
 
 
