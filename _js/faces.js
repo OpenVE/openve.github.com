@@ -11,14 +11,12 @@ define('faces', [
   var faces_target // jQuery Object
     , class_name   // String
     , callback     // Function
-    , details = {}
 
   face_template = _.template(face_template)
 
   function load(params, _callback) {
     var url        = '/json/members.json'
     faces_target   = $(params.faces_target)
-    details_target = $(params.details_target)
     class_name     = params.class_name
     callback       = _callback
 
