@@ -2,4 +2,36 @@
   <a href="https://github.com/<%= user.login %>" target="_blank">
     <img src="<%= user.avatar_url %>" alt="<%= user.login %>" title="<%= user.login %>" />
   </a>
+  <div class="popover top">
+    <div class="arrow"></div>
+    <h3 class="popover-title">
+      <a href="<%= details.url %>">
+        <%= details.login %>
+      </a>
+    </h3>
+    <div class="popover-content">
+      <img src="<%= details.avatar_url %>" alt="" class="avatar" />
+      <ul class="unstyled">
+        <li>
+          <% if (details.bio) { %>
+            <%= details.bio %>
+          <% } %>
+        </li>
+        <li>
+          Lo siguen: <%= details.followers %>
+        </li>
+        <li>
+          Sigue a: <%= details.following %>
+        </li>
+        <li>
+          Repositorios: <%= details.public_repos %>
+        </li>
+        <li>
+          <% if (details.location) { %>
+              Ubicación: <%= details.location %>
+          <% } %>
+        </li> 
+      </ul>
+    </div>
+  </div>
 </div>

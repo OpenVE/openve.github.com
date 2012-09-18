@@ -5,7 +5,6 @@ lib/jquery.js
 lib/underscore-amd.js
 lib/text.js
 text!../templates/face.html
-text!../templates/details.html
 faces.js
 app.js
 main.js
