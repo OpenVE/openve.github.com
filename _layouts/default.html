@@ -5,13 +5,14 @@
   <!--<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>-->
   <link rel="stylesheet" href="/css/yui-reset-min.css" />
   <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.css">
   <link rel="stylesheet" href="/css/style.css" />
   <script type="text/javascript" data-main="/js/main" src="/js/require.js"></script>
   <title> OpenVE, por el código abierto en Venezuela </title>
 </head>
 <body>
 
-  <div id="header">
+  <div id="header" class="container">
     <h1>OpenVE</h1>
     <p>Comunidad de Opensource en
     <span class="yellow">Ven</span>
@@ -20,8 +21,12 @@
     </p>
   </div>
 
-  <div id="content">
-    {{ content }}
+  <div id="content" class="container">
+    <div class="row">
+      <div class="span12">
+        {{ content }}
+      </div>
+    </div>
   </div>
 
 </body>

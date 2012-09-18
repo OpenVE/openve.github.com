@@ -10,25 +10,22 @@
       </a>
     </h3>
     <div class="popover-content">
-      <img src="<%= details.avatar_url %>" alt="" class="avatar" />
+      <% if (details.bio) { %>
+        <p><%= details.bio %></p>
+      <% } %>
       <ul class="unstyled">
         <li>
-          <% if (details.bio) { %>
-            <%= details.bio %>
-          <% } %>
+          <i class="icon-download"></i> &nbsp;Lo siguen: <%= details.followers %>
         </li>
         <li>
-          Lo siguen: <%= details.followers %>
+          <i class="icon-upload"></i> &nbsp;Sigue a: <%= details.following %>
         </li>
         <li>
-          Sigue a: <%= details.following %>
-        </li>
-        <li>
-          Repositorios: <%= details.public_repos %>
+          <i class="icon-briefcase"></i> &nbsp;Repositorios: <%= details.public_repos %>
         </li>
         <li>
           <% if (details.location) { %>
-              Ubicación: <%= details.location %>
+            <i class="icon-map-marker"></i> &nbsp;Ubicación: <%= details.location %>
           <% } %>
         </li> 
       </ul>
