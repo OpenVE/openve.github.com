@@ -15,7 +15,7 @@ define('faces', [
   face_template = _.template(face_template)
 
   function load(params, _callback) {
-    var url        = '/json/members.json'
+    var url        = 'https://api.github.com/orgs/openve/members'
     faces_target   = $(params.faces_target)
     class_name     = params.class_name
     callback       = _callback
@@ -30,7 +30,7 @@ define('faces', [
   }
 
   function getDetails(user) {
-    var url = '/json/users/' + user.login + '.json'
+    var url = 'https://api.github.com/users/' + user.login
     $.getJSON(url, function(details) {
       writeFace(user, details)
     })
