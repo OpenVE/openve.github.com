@@ -8,7 +8,6 @@ require.config({
   , jquery     : 'lib/jquery'
   , underscore : 'lib/underscore-amd'
   , app        : 'app'
-  , faces      : 'faces'
   }
 })
 
