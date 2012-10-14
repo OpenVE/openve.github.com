@@ -1,1 +1,0 @@
-define("app",[],function(){function e(){}return{init:e}}),require.config({paths:{text:"lib/text",jquery:"lib/jquery",underscore:"lib/underscore-amd",app:"app"}}),require(["app"],function(e){e.init()}),define("main",function(){})

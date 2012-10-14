@@ -1,1 +1,0 @@
-define("app",[],function(){function e(){}return{init:e}})
