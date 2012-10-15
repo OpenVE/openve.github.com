@@ -16,6 +16,13 @@ body, html {
   color       : #444;
 }
 
+a {
+  color : #49e;
+}
+a:hover, a:visited {
+  color : #e45;
+}
+
 
 #header {
   width       : 100%;
@@ -58,21 +65,19 @@ body, html {
   text-shadow     : 1px 1px 0 rgba(255,255,255,.6);
 }
 #menu div:hover {
+  color      : black;
   box-shadow : 0 -1px  0  rgba(  0,   0,   0, .3) inset,
                0 20px 3px rgba(255, 255, 255, .2) inset,
                0  0   5px rgba( 50,  50,  50, .5);
 }
-#menu a:nth-child(1n) div:hover {
+#menu a:nth-child(3n+1) div:hover {
   background  : #fb4;
-  color       : black;
 }
-#menu a:nth-child(2n) div:hover {
+#menu a:nth-child(3n+2) div:hover {
   background  : #49e;
-  color       : black;
 }
-#menu a:nth-child(3n) div:hover {
+#menu a:nth-child(3n+3) div:hover {
   background  : #e45;
-  color       : black;
 }
 
 
@@ -90,7 +95,44 @@ body, html {
 #content p {
   margin-bottom : 18px;
 }
+#content h2 {
+  font-size   : 18px;
+  font-weight : bold;
+  padding-top : 0px;
+}
 #content .content-main {
   padding    : 10px 25px 0 20px;
   text-align : justify;
+}
+
+
+#content .post {
+  margin : 0 0 20px;
+}
+#content .post .post-header {
+  margin-bottom : 10px;
+}
+#content .post .post-header small {
+  color : #999;
+}
+
+#content .languages a {
+  text-decoration : none;
+}
+#content .language {
+  width         : 95%;
+  background    : #DDD;
+  padding       : 10px;
+  margin-bottom : 20px;
+  border-radius : 3px;
+  color         : white;
+}
+#content a:nth-child(3n+1) .language {
+  background  : #fb4;
+}
+#content a:nth-child(3n+2) .language {
+  background  : #49e;
+}
+#content a:nth-child(3n+3) .language {
+  background  : #e45;
 }
