@@ -71,7 +71,7 @@ body, html {
   color       : black;
 }
 #menu a:nth-child(3n) div:hover {
-  background  : #e48;
+  background  : #e45;
   color       : black;
 }
 
@@ -91,6 +91,6 @@ body, html {
   margin-bottom : 18px;
 }
 #content .content-main {
-  padding    : 10px 20px;
+  padding    : 10px 25px 0 20px;
   text-align : justify;
 }
