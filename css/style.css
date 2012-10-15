@@ -127,12 +127,13 @@ a:hover, a:visited {
   border-radius : 3px;
   color         : white;
 }
-#content a:nth-child(3n+1) .language {
-  background  : #fb4;
+
+#content .languages .language.javascript {
+  background : #46483E;
+  box-shadow : inset 0   2px 0 #8BC84B,
+               inset 0  -2px 0 #8BC84B,
+               inset 0 -20px 0 #33342D;
 }
-#content a:nth-child(3n+2) .language {
-  background  : #49e;
-}
-#content a:nth-child(3n+3) .language {
-  background  : #e45;
+#content .languages .language.javascript:hover {
+  color : #8BC84B;
 }
