@@ -144,7 +144,7 @@ a:hover, a:visited {
 #content .topics .topic.python {
   background : #376A94;
   box-shadow : inset 0  -3px 0 #FFBC29,
-               inset 0  3px 0 #4C83A3;
+               inset 0   3px 0 #4C83A3;
 }
 #content .topics .topic.python:hover {
   text-decoration : underline;
