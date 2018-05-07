@@ -15,17 +15,16 @@
     <div class="wrapper">
       <header>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.12/js/all.js" integrity="sha384-Voup2lBiiyZYkRto2XWqbzxHXwzcm4A5RfdfG6466bu5LqjwwrjXCMBQBLMWh7qR" crossorigin="anonymous"></script>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
         {% if site.logo %}
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
-
         <p>{{ site.description | default: site.github.project_tagline }}</p>
-
         {% if site.github.is_project_page %}
-        <p class="fab fa-github"><a href="{{ site.github.repository_url }}">Ver el proyecto en Github <small>{{ site.github.repository_nwo }}</small></a></p>
+        <p class="view"><a href="{{ site.github.repository_url }}">Ve nuestros repositorios<small>en Github <i class="fab fa-github"></i> {{ site.github.repository_nwo }}</small></a></p>
         {% endif %}
+	{% if site.telegram %}
+        <p class="view"><a href="{{ site.telegram }}">Conversa con nosotros <small>en telegram <i class="fab fa-telegram"></small></i></a></p>
+	{% endif%}
       </header>
       <section>
 
@@ -40,8 +39,8 @@
             <a href="{{ user.html_url }}" class="avatar-link">
               {% avatar user=user.login size=16 %}</a>,
           {% endfor %}
-          and
-          <a href="{{ site.github.repository_url }}/graphs/contributors">{{ site.github.contributors.size|minus:4 }} más</a>
+          <!-- <a href="{{ site.github.repository_url }}/graphs/contributors">{{ site.github.contributors.size|minus:5 }} más</a> -->
+          <a href="{{ site.github.repository_url }}/graphs/contributors">y muchos más en <i class="fab fa-github"></i></a>
 	</p>
         {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
