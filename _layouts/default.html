@@ -35,9 +35,9 @@
         {% if site.github.is_project_page %}
         <p>
 	Mantenido por
-          {% for user in site.github.contributors limit:4 %}
+          {% for user in site.github.contributors limit:5 %}
             <a href="{{ user.html_url }}" class="avatar-link">
-              {% avatar user=user.login size=16 %}{{ user.login }}</a>,
+              {% avatar user=user.login size=16 %}</a>,
           {% endfor %}
           and
           <a href="{{ site.github.repository_url }}/graphs/contributors">{{ site.github.contributors.size|minus:4 }} más</a>
