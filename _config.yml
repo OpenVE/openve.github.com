@@ -2,3 +2,8 @@ theme: jekyll-theme-minimal
 title: openVE
 description: openVE es un intento de hacer algo verdaderamente Open Source para Venezuela
 show_downloads: false
+logo: openve.svg
+exclude:
+- Gemfile
+plugins:
+  - jekyll-avatar
