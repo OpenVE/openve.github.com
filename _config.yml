@@ -4,6 +4,7 @@ description: Es un intento de hacer algo verdaderamente Open Source para Venezue
 show_downloads: false
 logo: openve.png
 telegram: https://t.me/openve
+repository: openve/comunidades-en-telegram
 exclude:
 - Gemfile
 plugins:
