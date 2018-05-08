@@ -1,3 +1,10 @@
-auto:     true
-pygments: true
-lsi:      true
+theme: jekyll-theme-minimal
+title: OpenVE
+description: Es un intento de hacer algo verdaderamente Open Source para Venezuela
+show_downloads: false
+logo: openve.png
+telegram: https://t.me/openve
+exclude:
+- Gemfile
+plugins:
+  - jekyll-avatar
