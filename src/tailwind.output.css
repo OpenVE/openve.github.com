@@ -6049,11 +6049,19 @@ video {
 }
 
 .font-serif {
-  font-family: Heebo, sans-serif;
+  font-family: Georgia, serif;
 }
 
 .font-mono {
   font-family: "Fira Code", monospaced;
+}
+
+.font-display {
+  font-family: "Fira Code", monospaced;
+}
+
+.font-body {
+  font-family: Heebo, sans-serif;
 }
 
 .font-hairline {
@@ -17859,6 +17867,33 @@ video {
   transition-delay: 1000ms;
 }
 
+body {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: .4rem 0;
+}
+
+h2 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: .4rem 0;
+}
+
+h3 {
+  font-family: 'Heebo', sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin: .4rem 0;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -23319,11 +23354,19 @@ video {
   }
 
   .sm\:font-serif {
-    font-family: Heebo, sans-serif;
+    font-family: Georgia, serif;
   }
 
   .sm\:font-mono {
     font-family: "Fira Code", monospaced;
+  }
+
+  .sm\:font-display {
+    font-family: "Fira Code", monospaced;
+  }
+
+  .sm\:font-body {
+    font-family: Heebo, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -40590,11 +40633,19 @@ video {
   }
 
   .md\:font-serif {
-    font-family: Heebo, sans-serif;
+    font-family: Georgia, serif;
   }
 
   .md\:font-mono {
     font-family: "Fira Code", monospaced;
+  }
+
+  .md\:font-display {
+    font-family: "Fira Code", monospaced;
+  }
+
+  .md\:font-body {
+    font-family: Heebo, sans-serif;
   }
 
   .md\:font-hairline {
@@ -57861,11 +57912,19 @@ video {
   }
 
   .lg\:font-serif {
-    font-family: Heebo, sans-serif;
+    font-family: Georgia, serif;
   }
 
   .lg\:font-mono {
     font-family: "Fira Code", monospaced;
+  }
+
+  .lg\:font-display {
+    font-family: "Fira Code", monospaced;
+  }
+
+  .lg\:font-body {
+    font-family: Heebo, sans-serif;
   }
 
   .lg\:font-hairline {
@@ -75132,11 +75191,19 @@ video {
   }
 
   .xl\:font-serif {
-    font-family: Heebo, sans-serif;
+    font-family: Georgia, serif;
   }
 
   .xl\:font-mono {
     font-family: "Fira Code", monospaced;
+  }
+
+  .xl\:font-display {
+    font-family: "Fira Code", monospaced;
+  }
+
+  .xl\:font-body {
+    font-family: Heebo, sans-serif;
   }
 
   .xl\:font-hairline {
