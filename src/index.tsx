@@ -4,8 +4,7 @@ import ReactDOM from 'react-dom';
 import Layout from './components/Layout';
 import * as serviceWorker from './service-workers/serviceWorker';
 
-import './index.css';
-
+import './tailwind.output.css';
 
 ReactDOM.render(
   <React.StrictMode>

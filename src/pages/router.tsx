@@ -1,20 +1,21 @@
 import React from "react";
 import {
-  BrowserRouter,
   Switch,
   Route
 } from "react-router-dom";
 import Home from './Home';
+import About from './About';
 
 function Router() {
   return (
-    <BrowserRouter>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route exact path="/about">
+        <About />
+      </Route>
+    </Switch>
   );
 }
 
