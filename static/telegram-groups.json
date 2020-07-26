@@ -5,10 +5,10 @@
   "groups": [
     {
       "name": "Rust Programming Language",
-      "programingLanguage": "rust",
+      "programmingLanguage": "rust",
       "link": "https://t.me/rustlangVE",
       "collaborators": [
-        "@Armiixteryx"
+        "Armiixteryx"
       ]
     }
   ]

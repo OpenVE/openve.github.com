@@ -14,8 +14,10 @@ function Search(): JSX.Element {
     flexDirection: 'column',
     height: '300px',
     justifyContent: 'center',
+    marginTop: '100px',
     padding: '1rem',
     position: 'absolute',
+    top: 0,
     left: 0,
     width: '100vw'
   }
