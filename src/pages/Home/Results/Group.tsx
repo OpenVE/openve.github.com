@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 type GroupProps = {
   icon: string;
@@ -10,7 +10,7 @@ type GroupProps = {
 const Group = ({ icon, name, concept }: GroupProps) => (
   <li className="rounded overflow-hidden shadow-lg box-border p-4 mb-8 grid" style={{ gridTemplateColumns: '30px auto', gap: '1rem' }}>
     <div style={{ gridColumn: '1 / 1' }}>
-      <img src={icon} height="30" width="30" />
+      <img src={icon} height="30" width="30" alt="logo" />
     </div>
     <div style={{ gridColumn: '2 / 2' }}>
       <strong className="text-left block">{name}</strong>
