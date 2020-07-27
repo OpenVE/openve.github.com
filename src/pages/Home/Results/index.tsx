@@ -31,19 +31,25 @@ function Home({ filterText }: ResultsProps) {
   }, [filterText, groups]);
 
   return (
-    <ol style={{ marginTop: '300px' }} className="p-4">
-      {
-        filteredGroups.map((group: OpenVE.Group, index: number) => (
-          <Group
-            key={index}
-            name={group.name}
-            concept={group.concept}
-            link={group.link}
-            icon={icons[group.programmingLanguage]}
-          />
-        ))
-      }
-    </ol>
+    <main className="flex flex-wrap">
+      <div className="w-0 sm:w-0 md:w-0 lg:w-0 xl:w-1/6 h-12"></div>
+      <div className="w-full sm:w-full md:w-full lg:w-full xl:w-4/6 h-12">
+        <ol className="p-4 box-border">
+          {
+            filteredGroups.map((group: OpenVE.Group, index: number) => (
+              <Group
+                key={index}
+                name={group.name}
+                concept={group.concept}
+                link={group.link}
+                icon={icons[group.programmingLanguage]}
+              />
+            ))
+          }
+        </ol>
+      </div>
+      <div className="w-0 sm:w-0 md:w-0 lg:w-0 xl:w-1/6 h-12"></div>
+    </main>
   );
 }
 
