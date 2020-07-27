@@ -1,6 +1,10 @@
 import React, { CSSProperties } from "react";
 
-function Search(): JSX.Element {
+type SearchProps = {
+  onChange(event: React.ChangeEvent<HTMLInputElement>): void;
+}
+
+function Search({ onChange }: SearchProps ): JSX.Element {
   const backgroundImage = `url(https://images.unsplash.com/photo-1514996937319-344454492b37?ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80)`;
 
   const blockStyle: CSSProperties = {
@@ -14,7 +18,7 @@ function Search(): JSX.Element {
     flexDirection: 'column',
     height: '300px',
     justifyContent: 'center',
-    marginTop: '100px',
+    marginTop: '90px',
     padding: '1rem',
     position: 'absolute',
     top: 0,
@@ -33,6 +37,7 @@ function Search(): JSX.Element {
               id="search"
               type="search"
               placeholder="Nombre, Lenguaje de Programacion"
+              onChange={onChange}
             />
           </div>
         </form>

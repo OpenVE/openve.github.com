@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Group from './Group';
 
-function Home() {
-  const [groups, setGroups] = useState<OpenVE.Group[] | undefined>(undefined);
+type ResultsProps = {
+  filterText: string;
+}
+
+function Home({ filterText }: ResultsProps) {
+  const [groups, setGroups] = useState<OpenVE.Group[]>([]);
   const [icons, setIcons] = useState<OpenVE.LangIcons>({});
   
   useEffect(() => {
@@ -17,10 +21,19 @@ function Home() {
     fetchData();
   }, []);
 
+  const filteredGroups = useMemo(() => {
+    if (filterText) {
+      return groups.filter((group) => group.name.toLowerCase().indexOf(filterText.toLowerCase()) !== -1 ||
+        group.concept.toLowerCase().indexOf(filterText.toLowerCase()) !== -1);
+    }
+
+    return groups;
+  }, [filterText, groups]);
+
   return (
-    <ol style={{ marginTop: '300px' }}>
+    <ol style={{ marginTop: '300px' }} className="p-4">
       {
-        groups ? (groups as unknown as OpenVE.Group[]).map((group: OpenVE.Group, index: number) => (
+        filteredGroups.map((group: OpenVE.Group, index: number) => (
           <Group
             key={index}
             name={group.name}
@@ -28,7 +41,7 @@ function Home() {
             link={group.link}
             icon={icons[group.programmingLanguage]}
           />
-        )) : null
+        ))
       }
     </ol>
   );
