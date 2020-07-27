@@ -7,7 +7,7 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ to, children }: NavLinkProps): JSX.Element => (
-  <Link to={to} className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+  <Link to={to} className="block mt-4 lg:inline-block lg:mt-0 text-teal-400 hover:text-white mr-4">
     {children}
   </Link>
 );

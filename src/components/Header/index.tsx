@@ -3,16 +3,21 @@ import NavLink from './NavLink';
 import Logo from './Logo';
 
 const Header = (): JSX.Element => (
-  <nav className="flex items-center justify-between bg-gray-900 p-4 box-border">
-    <div className="flex items-center flex-shrink-0 text-white">
-      <NavLink to="/">
-        <Logo />
-      </NavLink>
-    </div>
-    <div className="w-full block flex-grow">
-      <div className="flex-grow">
+  <nav className="flex justify-between bg-gray-900 px-3 box-border">
+    <div className="flex">
+      <div>
+        <NavLink to="/">
+          <Logo />
+        </NavLink>
+      </div>
+      <div className="flex px-3 justify-center items-center">
         <NavLink to="about">Acerca</NavLink>
       </div>
+    </div>
+    <div className="flex justify-center items-center">
+      <button className="block bg-transparent hover:bg-teal-500 text-teal-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded">
+        Habla con Nosotros
+      </button>
     </div>
   </nav>
 );

@@ -18,7 +18,7 @@ function Search({ onChange }: SearchProps ): JSX.Element {
     flexDirection: 'column',
     height: '300px',
     justifyContent: 'center',
-    marginTop: '90px',
+    marginTop: '67px',
     padding: '1rem',
     position: 'absolute',
     top: 0,
