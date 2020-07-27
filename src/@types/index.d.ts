@@ -1,6 +1,7 @@
 declare namespace OpenVE {
   type Group = {
     name: string;
+    concept: string;
     programmingLanguage: string;
     link: string;
     collaborators: string[];

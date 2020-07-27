@@ -24,6 +24,8 @@ function Home() {
           <Group
             key={index}
             name={group.name}
+            concept={group.concept}
+            link={group.link}
             icon={icons[group.programmingLanguage]}
           />
         )) : null
